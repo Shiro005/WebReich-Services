@@ -84,7 +84,7 @@ function AppAppBar({ mode, toggleColorMode }) {
               }}
             >
               <img
-                src="src\assets\webreich_logo1.png"
+                src="https://github.com/Shiro005/WebReich-Services/blob/main/src/assets/webreich_logo1.png?raw=true"
                 style={logoStyle}
                 alt="Webreich"
               />
