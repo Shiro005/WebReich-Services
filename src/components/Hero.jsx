@@ -11,8 +11,8 @@ import { useState, useEffect } from 'react';
 
 const images = [
   "https://images.pexels.com/photos/3175975/pexels-photo-3175975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/7712570/pexels-photo-7712570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  "https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/6153739/pexels-photo-6153739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 ];
 
 export default function Hero() {
@@ -121,7 +121,7 @@ export default function Hero() {
           sx={(theme) => ({
             mt: { xs: 8, sm: 10 },
             alignSelf: 'center',
-            height: { xs: 100, sm: 600 },
+            height: { xs: 300, sm: 600 },
             width: '100%',
             backgroundImage: `url(${images[currentImage]})`,
             backgroundSize: 'cover',
@@ -138,7 +138,7 @@ export default function Hero() {
                 : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
             position: 'relative',
             opacity: fade ? 1 : 0,
-            transition: 'opacity 0.5s ease-in-out',
+            transition: 'opacity 1s ease-in-out',
           })}
         >
           <Typography
@@ -155,7 +155,6 @@ export default function Hero() {
               borderRadius: '0 0 10px 10px',
             }}
           >
-            Coming Soon to Every Sector A Revolution Awaits
           </Typography>
         </Box>
       </Container>
