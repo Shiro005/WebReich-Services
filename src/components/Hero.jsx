@@ -150,7 +150,7 @@ export default function Hero() {
               width: '100%',
               textAlign: 'center',
               backgroundColor: 'transparent',
-              fontSize: 'clamp(1rem, 5vw, 2rem)',
+              fontSize: 'clamp(1.3rem, 5vw, 2.3rem)',
               padding: '1rem',
               borderRadius: '0 0 10px 10px',
             }}
