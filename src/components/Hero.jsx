@@ -7,8 +7,29 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import { useState, useEffect } from 'react';
+
+const images = [
+  "https://images.pexels.com/photos/3175975/pexels-photo-3175975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/7712570/pexels-photo-7712570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+];
 
 export default function Hero() {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+        setFade(true);
+      }, 500); // duration of fade transition
+    }, 5000); // image change interval
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Box
       id="hero"
@@ -100,13 +121,11 @@ export default function Hero() {
           sx={(theme) => ({
             mt: { xs: 8, sm: 10 },
             alignSelf: 'center',
-            height: { xs: 200, sm: 700 },
+            height: { xs: 100, sm: 600 },
             width: '100%',
-            backgroundImage:
-              theme.palette.mode === 'light'
-                ? 'url("https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")'
-                : 'url("https://images.pexels.com/photos/103123/pexels-photo-103123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
+            backgroundImage: `url(${images[currentImage]})`,
             backgroundSize: 'cover',
+            backgroundPosition: 'center',
             borderRadius: '10px',
             outline: '1px solid',
             outlineColor:
@@ -117,8 +136,28 @@ export default function Hero() {
               theme.palette.mode === 'light'
                 ? `0 0 12px 8px ${alpha('#9CCCFC', 0.2)}`
                 : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
+            position: 'relative',
+            opacity: fade ? 1 : 0,
+            transition: 'opacity 0.5s ease-in-out',
           })}
-        />
+        >
+          <Typography
+            component="h2"
+            className="font-bold text-3xl text-white bg-opacity-10 p-4 rounded-md font-serif"
+            sx={{
+              position: 'absolute',
+              bottom: 0,
+              width: '100%',
+              textAlign: 'center',
+              backgroundColor: 'transparent',
+              fontSize: 'clamp(1rem, 5vw, 2rem)',
+              padding: '1rem',
+              borderRadius: '0 0 10px 10px',
+            }}
+          >
+            Coming Soon to Every Sector A Revolution Awaits
+          </Typography>
+        </Box>
       </Container>
     </Box>
   );

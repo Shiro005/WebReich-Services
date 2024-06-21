@@ -1,7 +1,14 @@
 import React from 'react'
-const App = () => {
+import './App.css'
+import { Outlet } from 'react-router-dom'
+
+function App() {
+
+
   return (
-    <h2>App</h2>
+    <>
+      <Outlet />
+    </>
   )
 }
 

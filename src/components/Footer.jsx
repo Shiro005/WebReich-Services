@@ -59,10 +59,10 @@ export default function Footer() {
             <Box sx={{ ml: '-15px' }}>
               <img
                 src={
-                  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
+                  'https://github.com/Shiro005/WebReich-Services/blob/main/src/assets/webreich_logo1.png?raw=true'
                 }
                 style={logoStyle}
-                alt="logo of sitemark"
+                alt="logo of webreich"
               />
             </Box>
             <Typography variant="body2" fontWeight={600} gutterBottom>
@@ -103,9 +103,6 @@ export default function Footer() {
           </Typography>
           <Link color="text.secondary" href="#">
             Features
-          </Link>
-          <Link color="text.secondary" href="#">
-            Testimonials
           </Link>
           <Link color="text.secondary" href="#">
             Highlights
@@ -191,7 +188,7 @@ export default function Footer() {
         >
           <IconButton
             color="inherit"
-            href="https://github.com/mui"
+            href="https://github.com/Shiro005"
             aria-label="GitHub"
             sx={{ alignSelf: 'center' }}
           >
@@ -199,7 +196,7 @@ export default function Footer() {
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://x.com/MaterialUI"
+            href="https://x.com/ShriyashRulhe?t=k4cVgM_UUFa7r5keZ0v7YA&s=09"
             aria-label="X"
             sx={{ alignSelf: 'center' }}
           >
@@ -207,7 +204,7 @@ export default function Footer() {
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://www.linkedin.com/company/mui/"
+            href="https://www.linkedin.com/in/shriyash-rulhe-655a9422a/"
             aria-label="LinkedIn"
             sx={{ alignSelf: 'center' }}
           >
