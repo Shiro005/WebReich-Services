@@ -81,9 +81,9 @@ export default function Hero() {
             color="text.secondary"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
-            Explore our cutting-edge dashboard, delivering high-quality solutions
+            Explore our Web Services, delivering high-quality solutions
             tailored to your needs. Elevate your experience with top-tier features
-            and services.
+            and services, At very low pricing.
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}

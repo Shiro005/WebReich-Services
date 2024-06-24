@@ -85,7 +85,7 @@ export default function LandingPage() {
         <LogoCollection />
         <Features />
         <Divider />
-        <Ppt />
+        {/* <Ppt /> */}
         <Divider />
         <Highlights />
         <Divider />

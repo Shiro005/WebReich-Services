@@ -14,8 +14,8 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
 const tiers = [
   {
-    title: 'Free',
-    price: '0',
+    title: 'Basic',
+    price: '299',
     description: [
       'No site maintenance',
       'Github Security',
@@ -28,7 +28,7 @@ const tiers = [
   {
     title: 'Professional',
     subheader: 'Recommended',
-    price: '220',
+    price: '1499',
     description: [
       'Daily site maintenance according to requriments',
       'Help center access',
@@ -37,15 +37,17 @@ const tiers = [
       'Domain (terms and condition)',
       'Hosting Services (terms and condition)',
       'Best deals',
+      'Data Management'
     ],
     buttonText: 'Start now',
     buttonVariant: 'contained',
   },
   {
     title: 'Enterprise',
-    price: '599',
+    price: '2499',
     description: [
-      'AWS (terms and condition)',
+      'Fast Services',
+      'All Professional Services Include',
       'Full stack applications',
       'Payments Gatways',
       '1 site per months (terms and conditions)',
